@@ -5,49 +5,37 @@ export default function DiagonalBeforeAfter({ before, after, className = "", sty
   const [position, setPosition] = useState(0);
 
   useEffect(() => {
+    if (window.matchMedia("(hover: hover)").matches) return;
+
     const el = containerRef.current;
     if (!el) return;
-    let rafId;
 
-    const update = () => {
-      const rect = el.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const start = vh * 0.9;
-      const end = vh * 0.1;
-      const raw = (start - rect.top) / (start - end);
-      const t = Math.min(1, Math.max(0, raw));
-      const eased = t * t * (3 - 2 * t);
-      setPosition(eased * 100);
-      rafId = null;
-    };
+    let showingAfter = false;
+    const id = window.setInterval(() => {
+      showingAfter = !showingAfter;
+      setPosition(showingAfter ? 100 : 0);
+    }, 2600);
 
-    const onScroll = () => {
-      if (rafId == null) rafId = requestAnimationFrame(update);
-    };
-
-    update();
-    const settleId = window.setTimeout(update, 300);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (rafId != null) cancelAnimationFrame(rafId);
-      window.clearTimeout(settleId);
-    };
+    return () => window.clearInterval(id);
   }, []);
 
   return (
-    <div ref={containerRef} className={`relative overflow-hidden ${className}`} style={style}>
+    <div
+      ref={containerRef}
+      className={`relative overflow-hidden ${className}`}
+      style={style}
+      onMouseEnter={() => setPosition(100)}
+      onMouseLeave={() => setPosition(0)}
+    >
       <div className="absolute inset-0">{before}</div>
       <div
-        className="absolute inset-0 bg-[#0a0a0c]"
+        className="absolute inset-0 bg-[#0a0a0c] transition-[clip-path] duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
         style={{ clipPath: `inset(0 0 0 ${100 - position}%)` }}
       >
         {after}
       </div>
       <div
-        className="absolute top-0 bottom-0 w-px -translate-x-1/2 bg-white/70"
+        className="absolute top-0 bottom-0 w-px -translate-x-1/2 bg-white/70 transition-[left] duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
         style={{ left: `${100 - position}%` }}
       />
     </div>

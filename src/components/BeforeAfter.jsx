@@ -14,9 +14,9 @@ import FigmaFrame from "./FigmaFrame";
 import DiagonalBeforeAfter from "./DiagonalBeforeAfter";
 import { useScrollReveal, RevealWords } from "./TextReveal";
 
-const MOBILE_SCALE_A = 368.045 / 609.532;
-const MOBILE_SCALE_B = 368.045 / 574;
-const MOBILE_SCALE_C = 368.045 / 691;
+const MOBILE_SCALE_A = 368.045 / 522;
+const MOBILE_SCALE_B = 368.045 / 521.576;
+const MOBILE_SCALE_C = 368.045 / 522;
 
 const HEADING_LINE_1 = [{ text: "We redesign the apps AI rushed ", className: "" }];
 const HEADING_LINE_2 = [{ text: " so they finally feel right", className: "" }];
@@ -25,12 +25,12 @@ const HEADING_TOTAL_WORDS = 6 + 5;
 function Card1({ scale = 1 }) {
   return (
     <div
-      className="relative shrink-0 overflow-hidden rounded-[30px] border-[1.337px] border-solid border-[rgba(255,255,255,0.07)] bg-[rgba(52,52,52,0.24)]"
-      style={{ width: 609.532 * scale, height: 663 * scale }}
+      className="relative shrink-0 overflow-hidden rounded-[26px] border-[1.156px] border-solid border-[rgba(255,255,255,0.07)] bg-[rgba(52,52,52,0.24)]"
+      style={{ width: 522 * scale, height: 589 * scale }}
     >
-      <div className="relative" style={{ width: 609.532, height: 663, transform: `scale(${scale})`, transformOrigin: "top left" }}>
+      <div className="relative" style={{ width: 522, height: 589, transform: `scale(${scale})`, transformOrigin: "top left" }}>
         <DiagonalBeforeAfter
-          className="rounded-[30px]"
+          className="rounded-[26px]"
           style={{ position: "absolute", inset: 0 }}
           before={
             <>
@@ -38,13 +38,13 @@ function Card1({ scale = 1 }) {
                 src={image230}
                 alt="Before redesign"
                 className="absolute object-cover pointer-events-none"
-                style={{ left: "44.66px", top: "68.56px", width: "242.375px", height: "523.963px" }}
+                style={{ left: "38.62px", top: "70.29px", width: "209.584px", height: "453.074px" }}
               />
               <img
                 src={image238}
                 alt="Before redesign, map view"
                 className="absolute object-cover pointer-events-none"
-                style={{ left: "309.23px", top: "57.66px", width: "252.455px", height: "545.752px" }}
+                style={{ left: "267.39px", top: "60.86px", width: "218.3px", height: "471.916px" }}
               />
             </>
           }
@@ -53,14 +53,14 @@ function Card1({ scale = 1 }) {
               <img
                 src={afterDriftCoffee2}
                 alt="After redesign"
-                className="absolute object-contain pointer-events-none"
-                style={{ left: "31.9px", top: "75px", width: "248.8px", height: "514.3px" }}
+                className="absolute object-cover pointer-events-none"
+                style={{ left: "27.32px", top: "75.93px", width: "213.09px", height: "445.35px" }}
               />
               <img
                 src={afterDriftCoffee1}
                 alt="After redesign, map view"
-                className="absolute object-contain pointer-events-none"
-                style={{ left: "324.7px", top: "75px", width: "254.1px", height: "514.4px" }}
+                className="absolute object-cover pointer-events-none"
+                style={{ left: "278.11px", top: "75.93px", width: "217.63px", height: "445.44px" }}
               />
             </>
           }
@@ -73,27 +73,27 @@ function Card1({ scale = 1 }) {
 function Card2({ scale = 1 }) {
   return (
     <div
-      className="relative shrink-0 overflow-hidden rounded-[30px] border-[1.161px] border-solid border-[rgba(255,255,255,0.07)] bg-[rgba(52,52,52,0.24)]"
-      style={{ width: 574 * scale, height: 595 * scale }}
+      className="relative shrink-0 overflow-hidden rounded-[27px] border-[1.042px] border-solid border-[rgba(255,255,255,0.07)] bg-[rgba(52,52,52,0.24)]"
+      style={{ width: 521.576 * scale, height: 589 * scale }}
     >
-      <div className="relative" style={{ width: 574, height: 595, transform: `scale(${scale})`, transformOrigin: "top left" }}>
+      <div className="relative" style={{ width: 521.576, height: 589, transform: `scale(${scale})`, transformOrigin: "top left" }}>
         <DiagonalBeforeAfter
-          className="rounded-[30px]"
+          className="rounded-[27px]"
           style={{ position: "absolute", inset: 0 }}
           before={
             <img
               src={image202}
               alt="Redesigned app screen"
               className="absolute -translate-x-1/2 object-cover pointer-events-none"
-              style={{ left: "calc(50% + 0.5px)", top: "42.84px", width: "234.991px", height: "508px" }}
+              style={{ left: "calc(50% + 0.23px)", top: "66.54px", width: "210.9px", height: "455.919px" }}
             />
           }
           after={
             <img
               src={card2After}
               alt="After redesign"
-              className="absolute -translate-x-1/2 object-contain pointer-events-none"
-              style={{ left: "calc(50% + 0.5px)", top: "42.84px", width: "250px", height: "508px" }}
+              className="absolute -translate-x-1/2 object-cover pointer-events-none"
+              style={{ left: "calc(50% + 0.23px)", top: "66.54px", width: "210.9px", height: "455.919px" }}
             />
           }
         />
@@ -105,12 +105,12 @@ function Card2({ scale = 1 }) {
 function Card4({ scale = 1 }) {
   return (
     <div
-      className="relative shrink-0 overflow-hidden rounded-[30px] border-[1.161px] border-solid border-[rgba(255,255,255,0.07)] bg-[rgba(52,52,52,0.24)]"
-      style={{ width: 691 * scale, height: 712 * scale }}
+      className="relative shrink-0 overflow-hidden rounded-[25px] border-[0.961px] border-solid border-[rgba(255,255,255,0.07)] bg-[rgba(52,52,52,0.24)]"
+      style={{ width: 522 * scale, height: 589 * scale }}
     >
-      <div className="relative" style={{ width: 691, height: 712, transform: `scale(${scale})`, transformOrigin: "top left" }}>
+      <div className="relative" style={{ width: 522, height: 589, transform: `scale(${scale})`, transformOrigin: "top left" }}>
         <DiagonalBeforeAfter
-          className="rounded-[30px]"
+          className="rounded-[25px]"
           style={{ position: "absolute", inset: 0 }}
           before={
             <>
@@ -118,13 +118,13 @@ function Card4({ scale = 1 }) {
                 src={koraBefore1}
                 alt="Before redesign"
                 className="absolute object-contain pointer-events-none"
-                style={{ left: "78px", top: "100.84px", width: "259px", height: "508px" }}
+                style={{ left: "51px", top: "84.38px", width: "195.66px", height: "420.24px" }}
               />
               <img
                 src={koraBefore2}
                 alt="Before redesign, dashboard view"
                 className="absolute object-contain pointer-events-none"
-                style={{ left: "357px", top: "100.84px", width: "256px", height: "505px" }}
+                style={{ left: "277px", top: "85.62px", width: "193.39px", height: "417.76px" }}
               />
             </>
           }
@@ -134,13 +134,13 @@ function Card4({ scale = 1 }) {
                 src={koraAfter1}
                 alt="After redesign"
                 className="absolute object-contain pointer-events-none"
-                style={{ left: "78px", top: "100.84px", width: "259px", height: "508px" }}
+                style={{ left: "51px", top: "84.38px", width: "195.66px", height: "420.24px" }}
               />
               <img
                 src={koraAfter2}
                 alt="After redesign, dashboard view"
                 className="absolute object-contain pointer-events-none"
-                style={{ left: "357px", top: "100.84px", width: "256px", height: "505px" }}
+                style={{ left: "277px", top: "85.62px", width: "193.39px", height: "417.76px" }}
               />
             </>
           }
@@ -165,19 +165,17 @@ function MobileBeforeAfter() {
         <RevealWords segments={HEADING_LINE_2} progress={progress} startIndex={6} totalWords={HEADING_TOTAL_WORDS} />
       </h2>
 
-      <FigmaFrame width={402} height={1266} className="bg-[#0a0a0c]">
-        <div className="absolute" style={{ left: "17px", top: "0px" }}>
+      <div className="overflow-hidden bg-[#0a0a0c]">
+        <div className="carousel-track flex w-max items-start gap-[24px] pl-[17px]">
           <Card1 scale={MOBILE_SCALE_A} />
-        </div>
-
-        <div className="absolute" style={{ left: "17px", top: "432px" }}>
+          <Card4 scale={MOBILE_SCALE_C} />
+          <Card2 scale={MOBILE_SCALE_B} />
+          <div className="shrink-0" style={{ width: "24px" }} />
+          <Card1 scale={MOBILE_SCALE_A} />
+          <Card4 scale={MOBILE_SCALE_C} />
           <Card2 scale={MOBILE_SCALE_B} />
         </div>
-
-        <div className="absolute" style={{ left: "17px", top: "846px" }}>
-          <Card4 scale={MOBILE_SCALE_C} />
-        </div>
-      </FigmaFrame>
+      </div>
     </section>
   );
 }
@@ -187,7 +185,7 @@ function DesktopBeforeAfter() {
 
   return (
     <div className="hidden md:block">
-      <FigmaFrame width={1440} height={1867} className="bg-[#0a0a0c]">
+      <FigmaFrame width={1440} height={1030} className="bg-[#0a0a0c]">
         <div
           className="absolute flex items-center justify-center"
           style={{ left: "-260.62px", top: "-588.34px", width: "886.047px", height: "870.643px" }}
@@ -206,14 +204,6 @@ function DesktopBeforeAfter() {
           style={{ left: "1112px", top: "-467px", width: "711px", height: "777px" }}
         />
 
-        <div className="absolute" style={{ left: "110px", top: "254px" }}>
-          <Card1 />
-        </div>
-
-        <div className="absolute" style={{ left: "777px", top: "313px" }}>
-          <Card2 />
-        </div>
-
         <div className="absolute flex items-center gap-2.5" style={{ left: "1083px", top: "124px" }}>
           <p className="font-urbanist text-[20px] font-medium whitespace-nowrap text-white">Before</p>
           <div className="h-[3px] w-[86px] shrink-0 rounded-full bg-[#d9d9d9]" />
@@ -222,8 +212,8 @@ function DesktopBeforeAfter() {
 
         <div
           ref={ref}
-          className="absolute -translate-x-1/2 text-center font-manrope text-[40px] font-medium whitespace-nowrap text-white"
-          style={{ left: "720px", top: "93px" }}
+          className="absolute font-manrope text-[40px] font-medium whitespace-pre-wrap text-white"
+          style={{ left: "58px", top: "121px", width: "596px" }}
         >
           <p className="mb-0 leading-normal">
             <RevealWords segments={HEADING_LINE_1} progress={progress} startIndex={0} totalWords={HEADING_TOTAL_WORDS} />
@@ -233,8 +223,17 @@ function DesktopBeforeAfter() {
           </p>
         </div>
 
-        <div className="absolute" style={{ left: "374px", top: "1013px" }}>
+        <div
+          className="carousel-track absolute flex w-max items-start gap-[45px]"
+          style={{ left: "58px", top: "279px" }}
+        >
+          <Card1 />
           <Card4 />
+          <Card2 />
+          <div className="shrink-0" style={{ width: "45px" }} />
+          <Card1 />
+          <Card4 />
+          <Card2 />
         </div>
       </FigmaFrame>
     </div>
