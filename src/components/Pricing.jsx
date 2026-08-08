@@ -175,7 +175,7 @@ function DesktopPricing() {
         <RevealOnScroll
           as="p"
           className="absolute font-aeonik text-[20px] text-[rgba(255,255,255,0.68)] whitespace-nowrap"
-          style={{ left: "171px", top: "19px" }}
+          style={{ left: "171px", top: "4px" }}
         >
           How far should we take it?
         </RevealOnScroll>
@@ -185,7 +185,7 @@ function DesktopPricing() {
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 -translate-x-1/2 text-center font-manrope text-[301.106px] font-medium whitespace-nowrap"
           style={{
-            top: "-10px",
+            top: "15px",
             animationDelay: "0.1s",
             backgroundImage:
               "linear-gradient(180deg, #ffffff 0%, #ffffff 28%, #6b6b6b 58%, #2a2a2a 82%, rgba(10,10,10,0.2) 100%)",

@@ -160,7 +160,7 @@ function MobileBeforeAfter() {
         <div className="h-[3px] w-[60px] shrink-0 rounded-full bg-[#d9d9d9]" />
         <p className="font-urbanist text-[16px] font-medium whitespace-nowrap text-white">After</p>
       </div>
-      <h2 ref={ref} className="mb-8 px-6 text-center font-manrope text-[26px] font-medium leading-tight text-white">
+      <h2 ref={ref} className="mb-8 px-6 text-center font-manrope text-[36px] font-medium leading-tight text-white">
         <RevealWords segments={HEADING_LINE_1} progress={progress} startIndex={0} totalWords={HEADING_TOTAL_WORDS} />
         <RevealWords segments={HEADING_LINE_2} progress={progress} startIndex={6} totalWords={HEADING_TOTAL_WORDS} />
       </h2>
@@ -222,7 +222,7 @@ function DesktopBeforeAfter() {
 
         <div
           ref={ref}
-          className="absolute -translate-x-1/2 text-center font-manrope text-[36px] font-medium whitespace-nowrap text-white"
+          className="absolute -translate-x-1/2 text-center font-manrope text-[40px] font-medium whitespace-nowrap text-white"
           style={{ left: "720px", top: "93px" }}
         >
           <p className="mb-0 leading-normal">
