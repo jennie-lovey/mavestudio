@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function RotatingWord({ words, interval = 2200, className = "" }) {
+export default function RotatingWord({ words, interval = 4200, className = "" }) {
   const [index, setIndex] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
 
@@ -10,7 +10,7 @@ export default function RotatingWord({ words, interval = 2200, className = "" })
       const settle = setTimeout(() => {
         setIndex((i) => (i + 1) % words.length);
         setTransitioning(false);
-      }, 550);
+      }, 800);
       return () => clearTimeout(settle);
     }, interval);
     return () => clearInterval(id);
@@ -24,7 +24,7 @@ export default function RotatingWord({ words, interval = 2200, className = "" })
       style={{ height: "1.2em" }}
     >
       <span
-        className="flex flex-col transition-transform duration-[550ms] ease-[cubic-bezier(0.65,0,0.35,1)]"
+        className="flex flex-col transition-transform duration-[800ms] ease-[cubic-bezier(0.65,0,0.35,1)]"
         style={{ transform: transitioning ? "translateY(-1.2em)" : "translateY(0)" }}
       >
         <span className="block" style={{ height: "1.2em", lineHeight: "1.2em" }}>

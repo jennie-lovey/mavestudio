@@ -1,6 +1,5 @@
 import checkIcon from "../assets/figma/check-icon-a.svg";
 import vector568 from "../assets/figma/vector-568.svg";
-import pricingIcon from "../assets/figma/pricing-icon.svg";
 import FigmaFrame from "./FigmaFrame";
 import RevealOnScroll from "./RevealOnScroll";
 
@@ -201,7 +200,7 @@ function DesktopPricing() {
 
         <div
           className="absolute flex items-stretch gap-[39px]"
-          style={{ left: "121px", top: "241px" }}
+          style={{ left: "121px", top: "200px" }}
         >
           {plans.map((plan, i) => (
             <RevealOnScroll key={plan.name} style={{ animationDelay: `${0.2 + i * 0.15}s` }}>
@@ -209,13 +208,6 @@ function DesktopPricing() {
             </RevealOnScroll>
           ))}
         </div>
-
-        <img
-          src={pricingIcon}
-          alt=""
-          className="absolute size-[59px]"
-          style={{ left: "1281px", top: "21px" }}
-        />
       </FigmaFrame>
     </div>
   );

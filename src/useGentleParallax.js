@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 
-export default function useGentleParallax(rate = 0.15) {
+export default function useGentleParallax(rate = 0.35) {
   const ref = useRef(null);
+  const lastOffset = useRef(0);
 
   useEffect(() => {
     const el = ref.current;
@@ -10,10 +11,11 @@ export default function useGentleParallax(rate = 0.15) {
     let rafId;
     const update = () => {
       const rect = el.getBoundingClientRect();
-      const viewportCenter = window.innerHeight / 2;
-      const elementCenter = rect.top + rect.height / 2;
-      const distanceFromCenter = elementCenter - viewportCenter;
-      el.style.transform = `translateY(${-distanceFromCenter * rate}px)`;
+      const naturalTop = rect.top + lastOffset.current;
+      const scrolledPast = -naturalTop;
+      const offset = scrolledPast > 0 ? scrolledPast * rate : 0;
+      lastOffset.current = offset;
+      el.style.transform = `translateY(${offset}px)`;
       rafId = null;
     };
     const onScroll = () => {
