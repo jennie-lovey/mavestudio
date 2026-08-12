@@ -113,7 +113,7 @@ function MobileHero() {
           style={{ animationDelay: "0s" }}
         >
           <p className="font-manrope text-[18px] font-semibold whitespace-nowrap text-white">
-            Book discovery call
+            Book a discovery call
           </p>
         </RevealOnScroll>
       </div>
@@ -170,7 +170,7 @@ function DesktopHero() {
             style={{ animationDelay: "0s" }}
           >
             <p className="font-manrope text-[18px] font-semibold whitespace-nowrap text-white">
-              Book discovery call
+              Book a discovery call
             </p>
           </RevealOnScroll>
         </div>
