@@ -66,10 +66,10 @@ function MobileHero() {
     <section className="relative block overflow-hidden bg-[#0e111e] px-6 pb-8 pt-8 lg:hidden">
       <div className="pointer-events-none absolute inset-0 bg-[rgba(7,7,7,0.93)]" />
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-x-0 bottom-0"
         style={{
-          background:
-            "radial-gradient(900px 700px at 50% 30%, rgba(70,95,145,0.55) 0%, rgba(60,78,130,0.4) 30%, rgba(42,53,94,0.16) 62%, rgba(14,17,30,0) 100%)",
+          top: "60%",
+          background: "linear-gradient(to bottom, rgba(42,52,94,0) 0%, rgba(42,52,94,0.35) 55%, rgba(58,72,120,0.55) 100%)",
         }}
       />
       <div
@@ -145,7 +145,7 @@ function DesktopHero() {
             src={logoMark}
             alt=""
             className="absolute block max-w-none"
-            style={{ left: "182px", top: "-4px", width: "49.648px", height: "49.648px" }}
+            style={{ left: "182px", top: "-2px", width: "24px", height: "24px" }}
           />
         </div>
 
