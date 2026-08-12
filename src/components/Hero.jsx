@@ -113,7 +113,7 @@ function MobileHero() {
           style={{ animationDelay: "0s" }}
         >
           <p className="font-manrope text-[18px] font-semibold whitespace-nowrap text-white">
-            Book discovery call
+            Book a discovery call
           </p>
         </RevealOnScroll>
       </div>
@@ -137,16 +137,11 @@ function DesktopHero() {
           }}
         />
 
-        <div className="absolute left-[97px] top-[61px]">
-          <span className="font-manrope text-[32px] font-normal whitespace-nowrap text-white">
+        <div className="absolute left-[97px] top-[61px] flex items-start gap-[6px]">
+          <span className="-mt-1 font-manrope text-[32px] font-normal whitespace-nowrap text-white">
             mavestudios
           </span>
-          <img
-            src={logoMark}
-            alt=""
-            className="absolute block max-w-none"
-            style={{ left: "182px", top: "-2px", width: "24px", height: "24px" }}
-          />
+          <img src={logoMark} alt="" className="-mt-1 block size-[24px]" />
         </div>
 
         <div
@@ -175,7 +170,7 @@ function DesktopHero() {
             style={{ animationDelay: "0s" }}
           >
             <p className="font-manrope text-[18px] font-semibold whitespace-nowrap text-white">
-              Book discovery call
+              Book a discovery call
             </p>
           </RevealOnScroll>
         </div>
