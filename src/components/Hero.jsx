@@ -81,13 +81,13 @@ function MobileHero() {
       />
 
       <div className="relative flex items-center justify-between">
-        <div className="flex items-center gap-[2px]">
-          <span className="font-manrope text-[24px] font-normal whitespace-nowrap text-white">
+        <div className="flex items-start gap-[2px]">
+          <span className="-mt-1 font-manrope text-[24px] font-normal whitespace-nowrap text-white">
             mavestudios
           </span>
-          <img src={logoMark} alt="" className="block size-[32px]" />
+          <img src={logoMark} alt="" className="-mt-1 block size-[18px]" />
         </div>
-        <img src={heroScrollIcon} alt="" className="block size-[44px]" />
+        <img src={heroScrollIcon} alt="" className="-mt-2 block size-[44px]" />
       </div>
 
       <div className="relative mt-32 flex flex-col items-center gap-[20px] text-center">
