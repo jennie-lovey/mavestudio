@@ -63,7 +63,7 @@ function HeroPattern() {
 
 function MobileHero() {
   return (
-    <section className="relative block overflow-hidden bg-[#0e111e] px-6 pb-8 pt-12 lg:hidden">
+    <section className="relative block overflow-hidden bg-[#0e111e] px-6 pb-8 pt-8 lg:hidden">
       <div className="pointer-events-none absolute inset-0 bg-[rgba(7,7,7,0.93)]" />
       <div
         className="pointer-events-none absolute inset-0"
@@ -90,7 +90,7 @@ function MobileHero() {
         <img src={heroScrollIcon} alt="" className="block size-[44px]" />
       </div>
 
-      <div className="relative mt-24 flex flex-col items-center gap-10 text-center">
+      <div className="relative mt-32 flex flex-col items-center gap-10 text-center">
         <RevealOnScroll
           as="div"
           immediate
