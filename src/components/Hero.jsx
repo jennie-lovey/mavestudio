@@ -137,11 +137,11 @@ function DesktopHero() {
           }}
         />
 
-        <div className="absolute left-[97px] top-[61px] flex items-start gap-[6px]">
-          <span className="-mt-1 font-manrope text-[32px] font-normal whitespace-nowrap text-white">
+        <div className="absolute left-[97px] top-[50px] flex items-center gap-[6px]">
+          <span className="font-manrope text-[32px] font-normal whitespace-nowrap text-white">
             mavestudios
           </span>
-          <img src={logoMark} alt="" className="-mt-1 block size-[24px]" />
+          <img src={logoMark} alt="" className="block size-[24px]" />
         </div>
 
         <div
@@ -179,7 +179,7 @@ function DesktopHero() {
           src={heroScrollIcon}
           alt=""
           className="absolute size-[59px]"
-          style={{ left: "1323px", top: "62px" }}
+          style={{ left: "1323px", top: "44px" }}
         />
       </FigmaFrame>
     </div>
