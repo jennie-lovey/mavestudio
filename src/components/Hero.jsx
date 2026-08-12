@@ -81,7 +81,7 @@ function MobileHero() {
       />
 
       <div className="relative flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-[2px]">
           <span className="font-manrope text-[24px] font-normal whitespace-nowrap text-white">
             mavestudios
           </span>
@@ -90,7 +90,7 @@ function MobileHero() {
         <img src={heroScrollIcon} alt="" className="block size-[44px]" />
       </div>
 
-      <div className="relative mt-32 flex flex-col items-center gap-10 text-center">
+      <div className="relative mt-32 flex flex-col items-center gap-[20px] text-center">
         <RevealOnScroll
           as="div"
           immediate
@@ -109,7 +109,7 @@ function MobileHero() {
           target="_blank"
           rel="noreferrer"
           immediate
-          className="mt-4 flex items-center justify-center rounded-[58px] bg-[#1e1e1e] px-8 py-[21px] transition hover:bg-[#3a3a3a]"
+          className="flex items-center justify-center rounded-[58px] bg-[#1e1e1e] px-8 py-[21px] transition hover:bg-[#3a3a3a]"
           style={{ animationDelay: "0s" }}
         >
           <p className="font-manrope text-[18px] font-semibold whitespace-nowrap text-white">
