@@ -63,13 +63,13 @@ function HeroPattern() {
 
 function MobileHero() {
   return (
-    <section className="relative block overflow-hidden bg-[#0e111e] px-6 pb-8 pt-12 lg:hidden">
+    <section className="relative block overflow-hidden bg-[#0e111e] px-6 pb-8 pt-8 lg:hidden">
       <div className="pointer-events-none absolute inset-0 bg-[rgba(7,7,7,0.93)]" />
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-x-0 bottom-0"
         style={{
-          background:
-            "radial-gradient(900px 700px at 50% 30%, rgba(70,95,145,0.55) 0%, rgba(60,78,130,0.4) 30%, rgba(42,53,94,0.16) 62%, rgba(14,17,30,0) 100%)",
+          top: "60%",
+          background: "linear-gradient(to bottom, rgba(42,52,94,0) 0%, rgba(42,52,94,0.35) 55%, rgba(58,72,120,0.55) 100%)",
         }}
       />
       <div
@@ -81,16 +81,16 @@ function MobileHero() {
       />
 
       <div className="relative flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="font-manrope text-[24px] font-normal whitespace-nowrap text-white">
+        <div className="flex items-start gap-[2px]">
+          <span className="-mt-1 font-manrope text-[24px] font-normal whitespace-nowrap text-white">
             mavestudios
           </span>
-          <img src={logoMark} alt="" className="block size-[32px]" />
+          <img src={logoMark} alt="" className="-mt-1 block size-[18px]" />
         </div>
-        <img src={heroScrollIcon} alt="" className="block size-[44px]" />
+        <img src={heroScrollIcon} alt="" className="-mt-2 block size-[44px]" />
       </div>
 
-      <div className="relative mt-24 flex flex-col items-center gap-10 text-center">
+      <div className="relative mt-32 flex flex-col items-center gap-[20px] text-center">
         <RevealOnScroll
           as="div"
           immediate
@@ -109,7 +109,7 @@ function MobileHero() {
           target="_blank"
           rel="noreferrer"
           immediate
-          className="mt-4 flex items-center justify-center rounded-[58px] bg-[#1e1e1e] px-8 py-[21px] transition hover:bg-[#3a3a3a]"
+          className="flex items-center justify-center rounded-[58px] bg-[#1e1e1e] px-8 py-[21px] transition hover:bg-[#3a3a3a]"
           style={{ animationDelay: "0s" }}
         >
           <p className="font-manrope text-[18px] font-semibold whitespace-nowrap text-white">
@@ -145,7 +145,7 @@ function DesktopHero() {
             src={logoMark}
             alt=""
             className="absolute block max-w-none"
-            style={{ left: "182px", top: "-4px", width: "49.648px", height: "49.648px" }}
+            style={{ left: "182px", top: "-2px", width: "24px", height: "24px" }}
           />
         </div>
 
