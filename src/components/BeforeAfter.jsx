@@ -18,8 +18,8 @@ const MOBILE_SCALE_A = 368.045 / 522;
 const MOBILE_SCALE_B = 368.045 / 521.576;
 const MOBILE_SCALE_C = 368.045 / 522;
 
-const HEADING_LINE_1 = [{ text: "We rebuild the apps AI rushed out ", className: "" }];
-const HEADING_LINE_2 = [{ text: " until they feel truly finished", className: "" }];
+const HEADING_LINE_1 = [{ text: "We rebuild the apps AI rushed ", className: "" }];
+const HEADING_LINE_2 = [{ text: "until they feel truly finished", className: "" }];
 const HEADING_TOTAL_WORDS = 6 + 5;
 
 function Card1({ scale = 1 }) {
