@@ -64,13 +64,9 @@ function BookCallButton({ className = "", textClassName = "" }) {
 
 function MobilePlanCard({ plan }) {
   return (
-    <div className="flex flex-col items-start gap-6 overflow-hidden rounded-[24px] bg-gradient-to-b from-[#141416] to-[38%] to-[#0a0a0c] p-6">
+    <div className={`flex flex-col items-start gap-6 overflow-hidden rounded-[24px] p-6 ${plan.featured ? "bg-[linear-gradient(170.8deg,rgb(27,34,56)_5.5%,rgb(10,10,12)_83.1%)]" : "bg-gradient-to-b from-[#18181c] to-[#101013]"}`}>
       <div
-        className={
-          plan.featured
-            ? "flex w-full flex-col items-start gap-5 rounded-[20px] bg-gradient-to-b from-[#131621] to-[#1e253f] px-5 py-4"
-            : "flex flex-col items-start gap-5"
-        }
+        className="flex flex-col items-start gap-5"
       >
         <h3 className="font-aeonik text-[26px] font-medium text-white">{plan.name}</h3>
         <div className="flex flex-col items-start gap-3">
@@ -132,15 +128,11 @@ function MobilePricing() {
 function DesktopPlanCard({ plan }) {
   return (
     <div
-      className="relative flex flex-col items-start gap-[41px] overflow-hidden rounded-[30px] bg-gradient-to-b from-[#141416] to-[38%] to-[#0a0a0c] px-[35px] py-[39px]"
+      className={`relative flex flex-col items-start gap-[41px] overflow-hidden rounded-[30px] px-[35px] py-[39px] ${plan.featured ? "bg-[linear-gradient(170.8deg,rgb(27,34,56)_5.5%,rgb(10,10,12)_83.1%)]" : "bg-gradient-to-b from-[#18181c] to-[#101013]"}`}
       style={{ width: "578px", minHeight: "756px" }}
     >
       <div
-        className={
-          plan.featured
-            ? "flex flex-col items-start gap-[26px] rounded-[30px] bg-gradient-to-b from-[#131621] to-[#1e253f] px-[23px] py-4"
-            : "flex flex-col items-start gap-[26px]"
-        }
+        className="flex flex-col items-start gap-[26px]"
       >
         <h3 className="font-aeonik text-[30px] font-medium text-white">
           {plan.name}
@@ -178,7 +170,7 @@ function DesktopPlanCard({ plan }) {
         </div>
       </div>
 
-      <BookCallButton className="py-[21px]" textClassName="text-[30px]" />
+      <BookCallButton className="mt-auto py-[21px]" textClassName="text-[30px]" />
     </div>
   );
 }
@@ -217,7 +209,7 @@ function DesktopPricing() {
           style={{ left: "121px", top: "200px" }}
         >
           {plans.map((plan, i) => (
-            <RevealOnScroll key={plan.name} style={{ animationDelay: `${0.2 + i * 0.15}s` }}>
+            <RevealOnScroll key={plan.name} className="flex" style={{ animationDelay: `${0.2 + i * 0.15}s` }}>
               <DesktopPlanCard plan={plan} />
             </RevealOnScroll>
           ))}
