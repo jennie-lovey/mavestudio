@@ -8,20 +8,20 @@ const TOTAL_WORDS = 4 + 4 + 2;
 const LINE_1 = [
   { text: "Mave", className: "text-[rgba(255,255,255,0.28)]" },
   { text: "studio", className: "" },
-  { text: " takes the apps ", className: "text-[rgba(255,255,255,0.48)]" },
-  { text: "and websites ", className: "" },
+  { text: " rebuilds the apps ", className: "text-[rgba(255,255,255,0.48)]" },
+  { text: "and sites ", className: "" },
 ];
 
 const LINE_3 = [
-  { text: "AI helped you rush, and ", className: "" },
-  { text: "redesigns them", className: "text-[rgba(255,255,255,0.45)]" },
-  { text: " into something ", className: "" },
+  { text: "you shipped fast with AI, and ", className: "" },
+  { text: "reshapes them", className: "text-[rgba(255,255,255,0.45)]" },
+  { text: " into products ", className: "" },
   { text: "people", className: "text-[rgba(255,255,255,0.43)]" },
 ];
 
 const LINE_4 = [
   { text: " ", className: "text-[rgba(255,255,255,0.43)]" },
-  { text: "trust.", className: "" },
+  { text: "believe in.", className: "" },
 ];
 
 function MobileTrustStatement() {
@@ -62,7 +62,7 @@ function MobileTrustStatement() {
         className="mt-10 flex h-[64px] w-fit items-center justify-center rounded-[58px] border border-white/15 bg-white/10 px-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_8px_24px_rgba(0,0,0,0.3)] backdrop-blur-xl transition hover:bg-white/20"
       >
         <p className="font-urbanist text-[18px] font-medium whitespace-nowrap text-[#dadada]">
-          Let&rsquo;s chat about your product
+          Let&rsquo;s talk about your product
         </p>
       </a>
     </section>
@@ -122,7 +122,7 @@ function DesktopTrustStatement() {
             style={{ width: "319px", transform: "scale(calc(1 / var(--figma-scale, 1)))", transformOrigin: "left center" }}
           >
             <p className="font-urbanist text-[20px] font-medium whitespace-nowrap text-[#dadada]">
-              Let&rsquo;s chat about your product
+              Let&rsquo;s talk about your product
             </p>
           </a>
         </div>
