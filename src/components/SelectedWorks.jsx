@@ -7,8 +7,6 @@ import mockupIphone17Before from "../assets/figma/mockup-iphone-17-before.png";
 import mockupIphone17After from "../assets/figma/mockup-iphone-17-after.png";
 import image97 from "../assets/figma/image-97.png";
 
-const MOBILE_SCALE = 345.6 / 607;
-
 function BeforeAfterLabels({ leftBefore, leftAfter, top }) {
   return (
     <>
@@ -99,33 +97,6 @@ function WorkCard4() {
   );
 }
 
-function ScaledCard({ Card }) {
-  return (
-    <div className="shrink-0 overflow-hidden rounded-[30px]" style={{ width: 607 * MOBILE_SCALE, height: 647 * MOBILE_SCALE }}>
-      <div style={{ width: 607, height: 647, transform: `scale(${MOBILE_SCALE})`, transformOrigin: "top left" }}>
-        <Card />
-      </div>
-    </div>
-  );
-}
-
-function MobileSelectedWorks() {
-  return (
-    <section className="block bg-[#0a0a0c] py-16 md:hidden">
-      <h2 className="mb-8 px-6 font-urbanist text-[28px] font-semibold text-white">
-        Selected works
-      </h2>
-
-      <div className="mt-[20px] flex flex-col items-center gap-4">
-        <ScaledCard Card={WorkCard1} />
-        <ScaledCard Card={WorkCard2} />
-        <ScaledCard Card={WorkCard3} />
-        <ScaledCard Card={WorkCard4} />
-      </div>
-    </section>
-  );
-}
-
 const WORKS = [
   { Card: WorkCard1, name: "Travel app" },
   { Card: WorkCard2, name: "Kora" },
@@ -137,12 +108,25 @@ const CARD_W = 607;
 const CARD_H = 647;
 const CARD_GAP = 48;
 const SCROLL_PER_WORK_VH = 70;
-const THUMB_SCALE = 56 / CARD_W;
+const COMPACT_BELOW = 1024;
 
-function DesktopSelectedWorks() {
+function useViewport() {
+  const [size, setSize] = useState(() =>
+    typeof window === "undefined" ? { w: 1440, h: 900 } : { w: window.innerWidth, h: window.innerHeight },
+  );
+  useEffect(() => {
+    const onResize = () => setSize({ w: window.innerWidth, h: window.innerHeight });
+    window.addEventListener("resize", onResize, { passive: true });
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+  return size;
+}
+
+function SelectedWorksScroll() {
   const sectionRef = useRef(null);
   const [progress, setProgress] = useState(0);
-  const [vh, setVh] = useState(() => (typeof window === "undefined" ? 900 : window.innerHeight));
+  const { w: vw, h: vh } = useViewport();
+  const compact = vw < COMPACT_BELOW;
 
   useEffect(() => {
     let raf = null;
@@ -153,7 +137,6 @@ function DesktopSelectedWorks() {
       const total = el.offsetHeight - window.innerHeight;
       const raw = total > 0 ? -el.getBoundingClientRect().top / total : 0;
       setProgress(Math.min(1, Math.max(0, raw)));
-      setVh(window.innerHeight);
     };
     const onScroll = () => {
       if (raf == null) raf = requestAnimationFrame(update);
@@ -171,10 +154,13 @@ function DesktopSelectedWorks() {
   const last = WORKS.length - 1;
   const pos = progress * last;
   const active = Math.round(pos);
-  const cardScale = Math.min(1, (vh * 0.66) / CARD_H);
+  const sideMargin = compact ? 24 : 0;
+  const cardScale = Math.min(1, (vh * (compact ? 0.55 : 0.66)) / CARD_H, (vw - sideMargin * 2) / CARD_W);
   const cardW = CARD_W * cardScale;
   const cardH = CARD_H * cardScale;
   const step = cardH + CARD_GAP;
+  const thumbW = compact ? 40 : 56;
+  const thumbScale = thumbW / CARD_W;
 
   const goTo = (index) => {
     const el = sectionRef.current;
@@ -186,14 +172,14 @@ function DesktopSelectedWorks() {
   return (
     <section
       ref={sectionRef}
-      className="relative hidden bg-[#0a0a0c] md:block"
+      className="relative bg-[#0a0a0c]"
       style={{ height: `${last * SCROLL_PER_WORK_VH + 100}vh` }}
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           className="absolute left-1/2"
           style={{
-            top: "50%",
+            top: compact ? "46%" : "50%",
             marginTop: -cardH / 2,
             width: cardW,
             marginLeft: -cardW / 2,
@@ -217,7 +203,7 @@ function DesktopSelectedWorks() {
                   </div>
                 </div>
                 <p
-                  className="absolute top-0 font-urbanist text-[12px] tracking-[0.2em] whitespace-nowrap text-white/50 uppercase"
+                  className="absolute top-0 hidden font-urbanist text-[12px] tracking-[0.2em] whitespace-nowrap text-white/50 uppercase lg:block"
                   style={{ left: "100%", marginLeft: 20, writingMode: "vertical-rl" }}
                 >
                   {name}
@@ -227,33 +213,36 @@ function DesktopSelectedWorks() {
           </div>
         </div>
 
-        <div className="pointer-events-none absolute bottom-12 left-10 lg:left-[100px]">
-          <p className="font-urbanist text-[14px] tracking-[0.2em] text-white/50 uppercase">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-[#0a0a0c] from-60% to-transparent lg:hidden" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0a0a0c] from-65% to-transparent lg:hidden" />
+
+        <div className="pointer-events-none absolute bottom-8 left-6 lg:bottom-12 lg:left-[100px]">
+          <p className="font-urbanist text-[12px] tracking-[0.2em] text-white/50 uppercase lg:text-[14px]">
             {String(active + 1).padStart(2, "0")} / {String(WORKS.length).padStart(2, "0")} &nbsp;·&nbsp; {WORKS[active].name}
           </p>
-          <h2 className="mt-3 font-urbanist text-[56px] leading-[1.05] font-semibold text-white">
+          <h2 className="mt-2 font-urbanist text-[34px] leading-[1.05] font-semibold text-white lg:mt-3 lg:text-[56px]">
             Selected
             <br />
             works
           </h2>
         </div>
 
-        <div className="absolute top-1/2 right-10 flex -translate-y-1/2 flex-col items-center gap-5 lg:right-[100px]">
+        <div className="absolute top-7 left-1/2 flex -translate-x-1/2 flex-row items-center gap-4 lg:top-1/2 lg:right-[100px] lg:left-auto lg:-translate-y-1/2 lg:translate-x-0 lg:flex-col lg:gap-5">
           {WORKS.map(({ Card, name }, i) => (
             <button
               key={name}
               type="button"
               aria-label={`Show ${name}`}
               onClick={() => goTo(i)}
-              className="block cursor-pointer overflow-hidden rounded-[8px] transition-all duration-500"
+              className="block cursor-pointer overflow-hidden rounded-[6px] transition-all duration-500 lg:rounded-[8px]"
               style={{
-                width: 56,
-                height: (CARD_H * 56) / CARD_W,
+                width: thumbW,
+                height: (CARD_H * thumbW) / CARD_W,
                 transform: `rotate(${i % 2 === 0 ? -7 : 7}deg) scale(${i === active ? 1.3 : 1})`,
                 opacity: i === active ? 1 : 0.4,
               }}
             >
-              <div style={{ width: CARD_W, height: CARD_H, transform: `scale(${THUMB_SCALE})`, transformOrigin: "top left", pointerEvents: "none" }}>
+              <div style={{ width: CARD_W, height: CARD_H, transform: `scale(${thumbScale})`, transformOrigin: "top left", pointerEvents: "none" }}>
                 <Card />
               </div>
             </button>
@@ -261,7 +250,7 @@ function DesktopSelectedWorks() {
         </div>
 
         <p
-          className="pointer-events-none absolute right-10 bottom-12 font-urbanist text-[12px] tracking-[0.2em] text-white/50 uppercase transition-opacity duration-500 lg:right-[100px]"
+          className="pointer-events-none absolute right-[100px] bottom-12 hidden font-urbanist text-[12px] tracking-[0.2em] text-white/50 uppercase transition-opacity duration-500 lg:block"
           style={{ opacity: progress > 0.95 ? 0 : 1 }}
         >
           Scroll down
@@ -272,10 +261,5 @@ function DesktopSelectedWorks() {
 }
 
 export default function SelectedWorks() {
-  return (
-    <>
-      <MobileSelectedWorks />
-      <DesktopSelectedWorks />
-    </>
-  );
+  return <SelectedWorksScroll />;
 }

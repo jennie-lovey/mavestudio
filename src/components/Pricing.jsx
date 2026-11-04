@@ -191,15 +191,15 @@ function DesktopPricing() {
         <RevealOnScroll
           as="p"
           className="absolute font-aeonik text-[24px] text-[rgba(255,255,255,0.68)] whitespace-nowrap"
-          style={{ left: "107px", top: "32px" }}
+          style={{ left: "121px", top: "32px" }}
         >
           Pricing
         </RevealOnScroll>
 
         <RevealOnScroll
           as="p"
-          className="absolute -translate-x-1/2 text-center font-manrope text-[40px] font-medium whitespace-nowrap text-white"
-          style={{ left: "406.5px", top: "88px", animationDelay: "0.1s" }}
+          className="absolute font-manrope text-[40px] font-medium whitespace-nowrap text-white"
+          style={{ left: "121px", top: "88px", animationDelay: "0.1s" }}
         >
           Clear pricing, no surprises.
         </RevealOnScroll>
