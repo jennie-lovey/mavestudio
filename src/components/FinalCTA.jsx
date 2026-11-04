@@ -20,16 +20,16 @@ function MobileFinalCTA() {
     <section id="contact" className="relative block overflow-hidden bg-[#0a0a0c] px-6 pt-20 md:hidden">
       <div className="flex flex-col items-center gap-6 text-center">
         <p className="font-manrope text-[32px] font-medium leading-tight text-white">
-          Ready to make your product better?
+          Got an app that deserves better?
         </p>
 
         <p className="font-urbanist text-[18px]">
           <span className="text-white">We </span>
-          <span className="text-[rgba(255,255,255,0.71)]">redesign apps </span>
+          <span className="text-[rgba(255,255,255,0.71)]">turn rough apps </span>
           <span className="text-white">and </span>
-          <span className="text-[rgba(255,255,255,0.7)]">websites into clear, </span>
-          <span className="text-white">polished digital experiences that people </span>
-          <span className="text-[rgba(255,255,255,0.72)]">actually enjoy using.</span>
+          <span className="text-[rgba(255,255,255,0.7)]">websites into clean, </span>
+          <span className="text-white">considered products that people </span>
+          <span className="text-[rgba(255,255,255,0.72)]">genuinely enjoy using.</span>
         </p>
 
         <a
@@ -105,17 +105,17 @@ function DesktopFinalCTA() {
           style={{ left: "447px", top: "60px" }}
         >
           <div className="text-center font-manrope text-[40px] font-medium whitespace-pre-wrap text-white" style={{ width: "544px" }}>
-            <p className="mb-0 leading-normal">Ready to make your </p>
-            <p className="leading-normal">product better?</p>
+            <p className="mb-0 leading-normal">Got an app that </p>
+            <p className="leading-normal">deserves better?</p>
           </div>
 
           <p className="text-center font-urbanist text-[24px] font-normal" style={{ width: "446px" }}>
             <span className="leading-normal text-white">We </span>
-            <span className="leading-normal text-[rgba(255,255,255,0.71)]">redesign apps </span>
+            <span className="leading-normal text-[rgba(255,255,255,0.71)]">turn rough apps </span>
             <span className="leading-normal text-white">and </span>
-            <span className="leading-normal text-[rgba(255,255,255,0.7)]">websites into clear, </span>
-            <span className="leading-normal text-white">polished digital experiences that people </span>
-            <span className="leading-normal text-[rgba(255,255,255,0.72)]">actually enjoy using.</span>
+            <span className="leading-normal text-[rgba(255,255,255,0.7)]">websites into clean, </span>
+            <span className="leading-normal text-white">considered products that people </span>
+            <span className="leading-normal text-[rgba(255,255,255,0.72)]">genuinely enjoy using.</span>
           </p>
 
           <a

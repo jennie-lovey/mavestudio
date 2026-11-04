@@ -5,43 +5,44 @@ import RevealOnScroll from "./RevealOnScroll";
 
 const plans = [
   {
-    name: "Redesign mvp",
+    name: "One-Time Project",
     description: (
       <>
-        For early founders who need their MVP
+        For founders with a clear
         <br />
-        to finally look and feel right.
+        app or website to redesign.
       </>
     ),
-    price: "$2,500",
+    pricePrefix: "From",
+    price: "$2,000",
     featured: false,
     features: [
-      "Moodboard & direction before full design starts",
-      "2 check-ins per week",
-      "UI/UX redesign for core screens and flows",
-      "No unnecessary meetings",
-      "Web or mobile — one platform per project",
-      "Final files delivered in Figma",
+      "Web design or mobile app design",
+      "Delivered in 2 weeks",
+      "Moodboard & direction before design starts",
+      "Two check-ins a week",
+      "Two rounds of revisions",
+      "Final Figma files, ready for developers",
     ],
   },
   {
-    name: "Full Product Experience",
+    name: "Complete Product Redesign",
     description: (
       <>
-        For growing products that need a
+        For products that need more
         <br />
-        complete design overhaul across platforms.
+        than a quick visual refresh.
       </>
     ),
-    price: "$5,000",
+    price: "Quoted after a call",
     featured: true,
     features: [
-      "3 check-ins per week",
-      "Moodboard & direction before full design starts",
-      "Full visual and interaction redesign",
-      "Web + mobile design included",
-      "Fully responsive",
-      "Final files delivered in Figma",
+      "A discovery call to learn your product and users",
+      "Every key screen and flow redesigned",
+      "Web and mobile, fully responsive",
+      "A simple design system to keep things consistent",
+      "Weekly check-ins from start to finish",
+      "Handover files and a walkthrough for your developers",
     ],
   },
 ];
@@ -76,7 +77,12 @@ function MobilePlanCard({ plan }) {
           <p className="font-urbanist text-[18px] font-medium text-white/90">
             {plan.description}
           </p>
-          <p className="font-urbanist text-[32px] font-bold text-white">{plan.price}</p>
+          <div className="flex flex-col items-start">
+            {plan.pricePrefix && (
+              <p className="font-urbanist text-[14px] font-medium text-white/60">{plan.pricePrefix}</p>
+            )}
+            <p className="font-urbanist text-[32px] font-bold text-white">{plan.price}</p>
+          </div>
         </div>
       </div>
 
@@ -108,7 +114,7 @@ function MobilePricing() {
         as="p"
         className="relative z-10 mb-10 font-manrope text-[32px] font-medium text-white"
       >
-        Find the right fit for your project.
+        Clear pricing, no surprises.
       </RevealOnScroll>
 
       <div className="relative z-10 flex flex-col gap-6">
@@ -118,6 +124,7 @@ function MobilePricing() {
           </RevealOnScroll>
         ))}
       </div>
+
     </section>
   );
 }
@@ -142,9 +149,16 @@ function DesktopPlanCard({ plan }) {
           <p className="font-urbanist text-[24px] font-medium text-white/90">
             {plan.description}
           </p>
-          <p className="font-urbanist text-[36px] font-bold text-white">
-            {plan.price}
-          </p>
+          <div className="flex flex-col items-start">
+            {plan.pricePrefix && (
+              <p className="font-urbanist text-[18px] font-medium text-white/60">
+                {plan.pricePrefix}
+              </p>
+            )}
+            <p className="font-urbanist text-[36px] font-bold text-white">
+              {plan.price}
+            </p>
+          </div>
         </div>
       </div>
 
@@ -195,7 +209,7 @@ function DesktopPricing() {
           className="absolute -translate-x-1/2 text-center font-manrope text-[40px] font-medium whitespace-nowrap text-white"
           style={{ left: "406.5px", top: "88px", animationDelay: "0.1s" }}
         >
-          Find the right fit for your project.
+          Clear pricing, no surprises.
         </RevealOnScroll>
 
         <div
@@ -208,6 +222,7 @@ function DesktopPricing() {
             </RevealOnScroll>
           ))}
         </div>
+
       </FigmaFrame>
     </div>
   );

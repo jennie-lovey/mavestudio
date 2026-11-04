@@ -4,12 +4,12 @@ import { useScrollReveal, RevealWords } from "./TextReveal";
 
 const services = [
   {
-    title: "AI Vibecoded App & Website Redesign",
-    description: "turning fast, AI-built products into something real",
+    title: "Redesign for AI-Built Products",
+    description: "taking fast, AI-built products and making them feel finished",
   },
   {
-    title: "UI/UX Design",
-    description: "clean, usable interfaces for new products, built from scratch",
+    title: "Product & Interface Design",
+    description: "thoughtful interfaces for new ideas, designed from a blank page",
   },
 ];
 
@@ -57,13 +57,13 @@ function DesktopWhatWeDo() {
           style={{ left: "684px", top: "184px", width: "678px" }}
         >
           <RevealWords
-            segments={[{ text: "AI Vibecoded App & Website Redesign ", className: "text-[40px] leading-normal text-white" }]}
+            segments={[{ text: "Redesign for AI-Built Products ", className: "text-[40px] leading-normal text-white" }]}
             progress={progress}
             startIndex={0}
             totalWords={TOTAL_WORDS}
           />
           <RevealWords
-            segments={[{ text: "turning fast, AI-built products into something real", className: "text-[32px] leading-normal text-[rgba(255,255,255,0.41)]" }]}
+            segments={[{ text: "taking fast, AI-built products and making them feel finished", className: "text-[32px] leading-normal text-[rgba(255,255,255,0.41)]" }]}
             progress={progress}
             startIndex={1}
             totalWords={TOTAL_WORDS}
@@ -75,13 +75,13 @@ function DesktopWhatWeDo() {
           style={{ left: "684px", top: "433px", width: "678px" }}
         >
           <RevealWords
-            segments={[{ text: "UI/UX Design\n", className: "leading-normal" }]}
+            segments={[{ text: "Product & Interface Design\n", className: "leading-normal" }]}
             progress={progress}
             startIndex={2}
             totalWords={TOTAL_WORDS}
           />
           <RevealWords
-            segments={[{ text: "clean, usable interfaces for new products, built from scratch", className: "leading-normal text-[rgba(255,255,255,0.5)]" }]}
+            segments={[{ text: "thoughtful interfaces for new ideas, designed from a blank page", className: "leading-normal text-[rgba(255,255,255,0.5)]" }]}
             progress={progress}
             startIndex={3}
             totalWords={TOTAL_WORDS}
