@@ -8,10 +8,13 @@ import koraAfter2 from "../assets/figma/kora-after-2.png";
 import card2After from "../assets/figma/card2-after.png";
 import afterDriftCoffee1 from "../assets/figma/after-drift-coffee-1.png";
 import afterDriftCoffee2 from "../assets/figma/after-drift-coffee-2.png";
+import skinBefore from "../assets/figma/skin-before.png";
+import skinAfter from "../assets/figma/skin-after.png";
 import vector564 from "../assets/figma/vector-564.svg";
 import vector566 from "../assets/figma/vector-566.svg";
 import FigmaFrame from "./FigmaFrame";
 import DiagonalBeforeAfter from "./DiagonalBeforeAfter";
+import ScanParticles from "./ScanParticles";
 import { useScrollReveal, RevealWords } from "./TextReveal";
 
 const MOBILE_SCALE_A = 368.045 / 522;
@@ -30,6 +33,7 @@ function Card1({ scale = 1 }) {
     >
       <div className="relative" style={{ width: 522, height: 589, transform: `scale(${scale})`, transformOrigin: "top left" }}>
         <DiagonalBeforeAfter
+          scan
           className="rounded-[26px]"
           style={{ position: "absolute", inset: 0 }}
           before={
@@ -78,6 +82,7 @@ function Card2({ scale = 1 }) {
     >
       <div className="relative" style={{ width: 521.576, height: 589, transform: `scale(${scale})`, transformOrigin: "top left" }}>
         <DiagonalBeforeAfter
+          scan
           className="rounded-[27px]"
           style={{ position: "absolute", inset: 0 }}
           before={
@@ -92,8 +97,8 @@ function Card2({ scale = 1 }) {
             <img
               src={card2After}
               alt="After redesign"
-              className="absolute -translate-x-1/2 object-cover pointer-events-none"
-              style={{ left: "calc(50% + 0.23px)", top: "66.54px", width: "210.9px", height: "455.919px" }}
+              className="absolute -translate-x-1/2 object-contain pointer-events-none"
+              style={{ left: "calc(50% + 0.23px)", top: "66.54px", width: "225.2px", height: "455.919px" }}
             />
           }
         />
@@ -110,6 +115,7 @@ function Card4({ scale = 1 }) {
     >
       <div className="relative" style={{ width: 522, height: 589, transform: `scale(${scale})`, transformOrigin: "top left" }}>
         <DiagonalBeforeAfter
+          scan
           className="rounded-[25px]"
           style={{ position: "absolute", inset: 0 }}
           before={
@@ -150,6 +156,39 @@ function Card4({ scale = 1 }) {
   );
 }
 
+function Card5({ scale = 1 }) {
+  return (
+    <div
+      className="relative shrink-0 overflow-hidden rounded-[26px] border-[1.156px] border-solid border-[rgba(255,255,255,0.07)] bg-[rgba(52,52,52,0.24)]"
+      style={{ width: 522 * scale, height: 589 * scale }}
+    >
+      <div className="relative" style={{ width: 522, height: 589, transform: `scale(${scale})`, transformOrigin: "top left" }}>
+        <DiagonalBeforeAfter
+          scan
+          className="rounded-[26px]"
+          style={{ position: "absolute", inset: 0 }}
+          before={
+            <img
+              src={skinBefore}
+              alt="Skin Scanner app before redesign"
+              className="absolute -translate-x-1/2 object-contain pointer-events-none"
+              style={{ left: "50%", top: "66.54px", width: "218.4px", height: "455.919px" }}
+            />
+          }
+          after={
+            <img
+              src={skinAfter}
+              alt="Skin Scanner app after redesign"
+              className="absolute -translate-x-1/2 object-contain pointer-events-none"
+              style={{ left: "50%", top: "66.54px", width: "220.6px", height: "455.919px" }}
+            />
+          }
+        />
+      </div>
+    </div>
+  );
+}
+
 function MobileBeforeAfter() {
   const [ref, progress] = useScrollReveal();
 
@@ -165,15 +204,21 @@ function MobileBeforeAfter() {
         <RevealWords segments={HEADING_LINE_2} progress={progress} startIndex={6} totalWords={HEADING_TOTAL_WORDS} />
       </h2>
 
-      <div className="overflow-hidden bg-[#0a0a0c]">
-        <div className="carousel-track flex w-max items-start gap-[24px] pl-[17px]">
+      <div data-scan-root className="relative overflow-hidden bg-[#0a0a0c]">
+        <ScanParticles className="absolute top-0 bottom-0 left-1/2 z-[9] h-full w-[170px] -translate-x-1/2" />
+        <div
+          data-scan-line
+          className="pointer-events-none absolute top-0 bottom-0 left-1/2 z-10 w-px bg-white/80 shadow-[0_0_14px_3px_rgba(150,175,255,0.5)]"
+        />
+        <div className="carousel-track ml-[17px] flex w-max items-start gap-[24px] pr-[24px]">
           <Card1 scale={MOBILE_SCALE_A} />
           <Card4 scale={MOBILE_SCALE_C} />
           <Card2 scale={MOBILE_SCALE_B} />
-          <div className="shrink-0" style={{ width: "24px" }} />
+          <Card5 scale={MOBILE_SCALE_C} />
           <Card1 scale={MOBILE_SCALE_A} />
           <Card4 scale={MOBILE_SCALE_C} />
           <Card2 scale={MOBILE_SCALE_B} />
+          <Card5 scale={MOBILE_SCALE_C} />
         </div>
       </div>
     </section>
@@ -184,7 +229,7 @@ function DesktopBeforeAfter() {
   const [ref, progress] = useScrollReveal();
 
   return (
-    <div className="hidden md:block">
+    <div data-scan-root className="hidden md:block">
       <FigmaFrame width={1440} height={1030} className="bg-[#0a0a0c]">
         <div
           className="absolute flex items-center justify-center"
@@ -224,17 +269,25 @@ function DesktopBeforeAfter() {
         </div>
 
         <div
-          className="carousel-track absolute flex w-max items-start gap-[45px]"
+          className="carousel-track absolute flex w-max items-start gap-[45px] pr-[45px]"
           style={{ left: "58px", top: "279px" }}
         >
           <Card1 />
           <Card4 />
           <Card2 />
-          <div className="shrink-0" style={{ width: "45px" }} />
+          <Card5 />
           <Card1 />
           <Card4 />
           <Card2 />
+          <Card5 />
         </div>
+
+        <ScanParticles className="absolute z-[9]" style={{ left: "540px", top: "279px", width: "360px", height: "589px" }} />
+        <div
+          data-scan-line
+          className="pointer-events-none absolute z-10 w-px bg-white/80 shadow-[0_0_16px_4px_rgba(150,175,255,0.5)]"
+          style={{ left: "720px", top: "279px", height: "589px" }}
+        />
       </FigmaFrame>
     </div>
   );
