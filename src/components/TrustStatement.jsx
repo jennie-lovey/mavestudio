@@ -1,5 +1,5 @@
 import unionIcon from "../assets/figma/union.svg";
-import image244 from "../assets/figma/image-244.png";
+import image244 from "../assets/figma/image-244.webp";
 import FigmaFrame from "./FigmaFrame";
 import { useScrollReveal, RevealWords } from "./TextReveal";
 
@@ -29,13 +29,13 @@ function MobileTrustStatement() {
 
   return (
     <section className="relative block overflow-hidden bg-[#0a0a0c] px-6 py-16 lg:hidden">
-      <img
+      <img loading="lazy" decoding="async"
         src={image244}
         alt=""
         className="pattern-drift pointer-events-none absolute inset-0 size-full object-cover opacity-25"
       />
 
-      <img src={unionIcon} alt="" className="relative mb-8 h-[22px] w-[16px]" />
+      <img loading="lazy" decoding="async" src={unionIcon} alt="" className="relative mb-8 h-[22px] w-[16px]" />
 
       <div ref={ref} className="font-manrope text-[32px] font-medium leading-snug whitespace-pre-wrap text-white">
         <p className="mb-0">
@@ -81,7 +81,7 @@ function DesktopTrustStatement() {
         >
           <div className="flex-none" style={{ transform: "rotate(90.17deg)" }}>
             <div className="pattern-drift relative" style={{ width: "814.068px", height: "1447.231px" }}>
-              <img
+              <img loading="lazy" decoding="async"
                 src={image244}
                 alt=""
                 className="pointer-events-none absolute inset-0 size-full object-cover opacity-40"
@@ -94,7 +94,7 @@ function DesktopTrustStatement() {
           className="absolute flex flex-col items-start justify-center gap-11"
           style={{ left: "256px", top: 0, bottom: 0, right: "338px" }}
         >
-          <img src={unionIcon} alt="" className="h-[17.484px] w-[13.11px]" />
+          <img loading="lazy" decoding="async" src={unionIcon} alt="" className="h-[17.484px] w-[13.11px]" />
 
           <div ref={ref} className="w-[678px] font-manrope text-[40px] font-medium whitespace-pre-wrap text-white">
             <p className="mb-0">

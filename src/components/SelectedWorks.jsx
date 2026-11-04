@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import mockupIphone15A from "../assets/figma/mockup-iphone-15-a.png";
-import mockupIphone15B from "../assets/figma/mockup-iphone-15-b.png";
-import mockupIphone17eA from "../assets/figma/mockup-iphone-17e-a.png";
-import mockupIphone17eB from "../assets/figma/mockup-iphone-17e-b.png";
-import mockupIphone17Before from "../assets/figma/mockup-iphone-17-before.png";
-import mockupIphone17After from "../assets/figma/mockup-iphone-17-after.png";
-import image97 from "../assets/figma/image-97.png";
+import mockupIphone15A from "../assets/figma/mockup-iphone-15-a.webp";
+import mockupIphone15B from "../assets/figma/mockup-iphone-15-b.webp";
+import mockupIphone17eA from "../assets/figma/mockup-iphone-17e-a.webp";
+import mockupIphone17eB from "../assets/figma/mockup-iphone-17e-b.webp";
+import mockupIphone17Before from "../assets/figma/mockup-iphone-17-before.webp";
+import mockupIphone17After from "../assets/figma/mockup-iphone-17-after.webp";
+import image97 from "../assets/figma/image-97.webp";
 
 function BeforeAfterLabels({ leftBefore, leftAfter, top }) {
   return (
