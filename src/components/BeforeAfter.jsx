@@ -1,15 +1,15 @@
-import image202 from "../assets/figma/image-202.png";
-import image230 from "../assets/figma/image-230.png";
-import image238 from "../assets/figma/image-238.png";
-import koraBefore1 from "../assets/figma/kora-before-1.png";
-import koraBefore2 from "../assets/figma/kora-before-2.png";
-import koraAfter1 from "../assets/figma/kora-after-1.png";
-import koraAfter2 from "../assets/figma/kora-after-2.png";
-import card2After from "../assets/figma/card2-after.png";
-import afterDriftCoffee1 from "../assets/figma/after-drift-coffee-1.png";
-import afterDriftCoffee2 from "../assets/figma/after-drift-coffee-2.png";
-import skinBefore from "../assets/figma/skin-before.png";
-import skinAfter from "../assets/figma/skin-after.png";
+import image202 from "../assets/figma/image-202.webp";
+import image230 from "../assets/figma/image-230.webp";
+import image238 from "../assets/figma/image-238.webp";
+import koraBefore1 from "../assets/figma/kora-before-1.webp";
+import koraBefore2 from "../assets/figma/kora-before-2.webp";
+import koraAfter1 from "../assets/figma/kora-after-1.webp";
+import koraAfter2 from "../assets/figma/kora-after-2.webp";
+import card2After from "../assets/figma/card2-after.webp";
+import afterDriftCoffee1 from "../assets/figma/after-drift-coffee-1.webp";
+import afterDriftCoffee2 from "../assets/figma/after-drift-coffee-2.webp";
+import skinBefore from "../assets/figma/skin-before.webp";
+import skinAfter from "../assets/figma/skin-after.webp";
 import vector564 from "../assets/figma/vector-564.svg";
 import vector566 from "../assets/figma/vector-566.svg";
 import FigmaFrame from "./FigmaFrame";
@@ -38,13 +38,13 @@ function Card1({ scale = 1 }) {
           style={{ position: "absolute", inset: 0 }}
           before={
             <>
-              <img
+              <img decoding="async"
                 src={image230}
                 alt="Before redesign"
                 className="absolute object-cover pointer-events-none"
                 style={{ left: "38.62px", top: "70.29px", width: "209.584px", height: "453.074px" }}
               />
-              <img
+              <img decoding="async"
                 src={image238}
                 alt="Before redesign, map view"
                 className="absolute object-cover pointer-events-none"
@@ -54,13 +54,13 @@ function Card1({ scale = 1 }) {
           }
           after={
             <>
-              <img
+              <img decoding="async"
                 src={afterDriftCoffee2}
                 alt="After redesign"
                 className="absolute object-cover pointer-events-none"
                 style={{ left: "27.32px", top: "75.93px", width: "213.09px", height: "445.35px" }}
               />
-              <img
+              <img decoding="async"
                 src={afterDriftCoffee1}
                 alt="After redesign, map view"
                 className="absolute object-cover pointer-events-none"
@@ -86,7 +86,7 @@ function Card2({ scale = 1 }) {
           className="rounded-[27px]"
           style={{ position: "absolute", inset: 0 }}
           before={
-            <img
+            <img decoding="async"
               src={image202}
               alt="Redesigned app screen"
               className="absolute -translate-x-1/2 object-cover pointer-events-none"
@@ -94,7 +94,7 @@ function Card2({ scale = 1 }) {
             />
           }
           after={
-            <img
+            <img decoding="async"
               src={card2After}
               alt="After redesign"
               className="absolute -translate-x-1/2 object-contain pointer-events-none"
@@ -120,13 +120,13 @@ function Card4({ scale = 1 }) {
           style={{ position: "absolute", inset: 0 }}
           before={
             <>
-              <img
+              <img decoding="async"
                 src={koraBefore1}
                 alt="Before redesign"
                 className="absolute object-contain pointer-events-none"
                 style={{ left: "51px", top: "84.38px", width: "195.66px", height: "420.24px" }}
               />
-              <img
+              <img decoding="async"
                 src={koraBefore2}
                 alt="Before redesign, dashboard view"
                 className="absolute object-contain pointer-events-none"
@@ -136,13 +136,13 @@ function Card4({ scale = 1 }) {
           }
           after={
             <>
-              <img
+              <img decoding="async"
                 src={koraAfter1}
                 alt="After redesign"
                 className="absolute object-contain pointer-events-none"
                 style={{ left: "51px", top: "84.38px", width: "195.66px", height: "420.24px" }}
               />
-              <img
+              <img decoding="async"
                 src={koraAfter2}
                 alt="After redesign, dashboard view"
                 className="absolute object-contain pointer-events-none"
@@ -168,7 +168,7 @@ function Card5({ scale = 1 }) {
           className="rounded-[26px]"
           style={{ position: "absolute", inset: 0 }}
           before={
-            <img
+            <img decoding="async"
               src={skinBefore}
               alt="Skin Scanner app before redesign"
               className="absolute -translate-x-1/2 object-contain pointer-events-none"
@@ -176,7 +176,7 @@ function Card5({ scale = 1 }) {
             />
           }
           after={
-            <img
+            <img decoding="async"
               src={skinAfter}
               alt="Skin Scanner app after redesign"
               className="absolute -translate-x-1/2 object-contain pointer-events-none"
@@ -237,12 +237,12 @@ function DesktopBeforeAfter() {
         >
           <div className="flex-none" style={{ transform: "rotate(11.46deg)" }}>
             <div className="relative" style={{ width: "755.036px", height: "735.324px" }}>
-              <img src={vector564} alt="" className="absolute inset-0 block size-full max-w-none" />
+              <img decoding="async" src={vector564} alt="" className="absolute inset-0 block size-full max-w-none" />
             </div>
           </div>
         </div>
 
-        <img
+        <img decoding="async"
           src={vector566}
           alt=""
           className="absolute block max-w-none"
