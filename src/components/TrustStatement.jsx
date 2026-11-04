@@ -56,7 +56,7 @@ function MobileTrustStatement() {
       </div>
 
       <a
-        href="https://cal.com/mavestudios/30min"
+        href="https://cal.com/mavestudio-hk0kyt/30min?overlayCalendar=true"
         target="_blank"
         rel="noreferrer"
         className="mt-10 flex h-[64px] w-fit items-center justify-center rounded-[58px] border border-white/15 bg-white/10 px-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_8px_24px_rgba(0,0,0,0.3)] backdrop-blur-xl transition hover:bg-white/20"
@@ -115,7 +115,7 @@ function DesktopTrustStatement() {
           </div>
 
           <a
-            href="https://cal.com/mavestudios/30min"
+            href="https://cal.com/mavestudio-hk0kyt/30min?overlayCalendar=true"
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center overflow-hidden rounded-[58px] border border-white/15 bg-white/10 py-[21px] shadow-[inset_0_1px_0_rgba(255,255,255,0.25),0_8px_24px_rgba(0,0,0,0.3)] backdrop-blur-xl transition hover:bg-white/20"

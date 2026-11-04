@@ -6,8 +6,20 @@ import SelectedWorks from "./components/SelectedWorks";
 import Pricing from "./components/Pricing";
 import FinalCTA from "./components/FinalCTA";
 import SmoothCursor from "./components/SmoothCursor";
+import ContactPage from "./components/ContactPage";
 
 function App() {
+  const isContactPage = window.location.pathname.replace(/\/+$/, "") === "/contact";
+
+  if (isContactPage) {
+    return (
+      <div className="bg-[#0a0a0c]">
+        <SmoothCursor />
+        <ContactPage />
+      </div>
+    );
+  }
+
   return (
     <div className="bg-[#0a0a0c]">
       <SmoothCursor />

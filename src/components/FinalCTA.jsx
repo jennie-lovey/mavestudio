@@ -33,7 +33,7 @@ function MobileFinalCTA() {
         </p>
 
         <a
-          href="mailto:hello@mavestudios.com"
+          href="/contact"
           className="flex h-[56px] items-center justify-center transition hover:opacity-80"
         >
           <p className="font-urbanist text-[20px] font-semibold whitespace-nowrap text-white">
@@ -45,7 +45,7 @@ function MobileFinalCTA() {
       <div className="mt-16 flex flex-col items-center gap-4">
         <div className="relative flex h-[56px] w-full items-center justify-between border-x border-white/10 bg-[rgba(20,19,19,0.07)] px-5">
           <a
-            href="https://cal.com/mavestudios/30min"
+            href="https://cal.com/mavestudio-hk0kyt/30min?overlayCalendar=true"
             target="_blank"
             rel="noreferrer"
             className="font-urbanist text-[16px] font-normal whitespace-nowrap text-white transition hover:opacity-80"
@@ -119,7 +119,7 @@ function DesktopFinalCTA() {
           </p>
 
           <a
-            href="mailto:hello@mavestudios.com"
+            href="/contact"
             className="flex h-[59px] w-[252px] items-center justify-center transition hover:opacity-80"
           >
             <p className="font-urbanist text-[22px] font-semibold whitespace-nowrap text-white">
@@ -134,7 +134,7 @@ function DesktopFinalCTA() {
         >
           <div className="relative h-[59px] w-full shrink-0 border-x border-white/10 bg-[rgba(20,19,19,0.07)]">
             <a
-              href="https://cal.com/mavestudios/30min"
+              href="https://cal.com/mavestudio-hk0kyt/30min?overlayCalendar=true"
               target="_blank"
               rel="noreferrer"
               className="absolute -translate-x-1/2 font-urbanist text-[24px] font-normal whitespace-nowrap text-white transition hover:opacity-80"
