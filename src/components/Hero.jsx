@@ -105,7 +105,7 @@ function MobileHero() {
 
         <RevealOnScroll
           as="a"
-          href="https://cal.com/mavestudios/30min"
+          href="https://cal.com/mavestudio-hk0kyt/30min?overlayCalendar=true"
           target="_blank"
           rel="noreferrer"
           immediate
@@ -162,7 +162,7 @@ function DesktopHero() {
 
           <RevealOnScroll
             as="a"
-            href="https://cal.com/mavestudios/30min"
+            href="https://cal.com/mavestudio-hk0kyt/30min?overlayCalendar=true"
             target="_blank"
             rel="noreferrer"
             immediate

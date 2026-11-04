@@ -50,7 +50,7 @@ const plans = [
 function BookCallButton({ className = "", textClassName = "" }) {
   return (
     <a
-      href="https://cal.com/mavestudios/30min"
+      href="https://cal.com/mavestudio-hk0kyt/30min?overlayCalendar=true"
       target="_blank"
       rel="noreferrer"
       className={`flex w-full items-center justify-center overflow-hidden rounded-[58px] bg-[rgba(101,101,101,0.13)] transition hover:bg-[rgba(101,101,101,0.24)] ${className}`}
